@@ -1,0 +1,36 @@
+body {
+    background: url(../../images/bg.jpg) center/cover fixed;
+}
+
+header {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 85% 15%;
+
+        .header-top {           
+            @include centerChild;
+            text-align: center;
+            color: white;
+
+            .header-container {
+
+                h1 {
+                    font-size: 5rem;
+                    max-width: 55%;
+                    margin: 0 auto;
+                    letter-spacing: 6px;
+
+                }
+
+                p {
+                    padding: 40px 0 80px;
+                }
+
+                i {
+                    border: 1px solid #ccc;
+                    padding: 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+}
