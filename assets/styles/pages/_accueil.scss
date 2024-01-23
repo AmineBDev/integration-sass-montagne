@@ -2,3 +2,62 @@ body {
     background: url(../../images/bg.jpg) center/cover fixed;
 }
 
+section {
+    background: white;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+        width: 100%;;
+    }
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 300;
+        padding: 70px 0;
+        position: relative;
+        display: inline-block;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            bottom: 0;
+            height: 1px;
+            background-color: $white;
+        }
+        &::before {
+            left: -160%;
+            width: 100%;
+        }
+        
+        &::after {
+            right: -160%;
+            width: 100%;
+        }
+    }
+
+    .april-25 {
+        width: 80%;
+        margin: 0 auto;
+
+        .april-25-container {
+            width: 60%;
+            margin: auto;
+
+            h1 {
+                font-size: 3.6rem;
+                letter-spacing: 4px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 30px;
+                padding: 50px 0;
+            }
+        }
+    }
+
+}

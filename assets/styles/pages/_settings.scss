@@ -25,7 +25,7 @@ $white: rgb(228, 228, 228);
     padding: 0;
     list-style: none;
     text-decoration: none;
-    
+    box-sizing: border-box;
 }
 body {
     font-family: "Merriweather", sans-serif;
@@ -34,8 +34,7 @@ body {
         font-style: italic;
     }
     h1,
-    h2,
-    h3 {
+    h2 {
         font-family: "Inter", sans-serif;
         text-transform: uppercase;
     }
