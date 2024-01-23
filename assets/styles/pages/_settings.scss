@@ -11,7 +11,7 @@
 }
 
 $color1: rgb(122, 122, 122);
-$white: rgb(196, 196, 196);
+$white: rgb(228, 228, 228);
 
 @mixin centerChild {
     display: flex;
@@ -25,11 +25,11 @@ $white: rgb(196, 196, 196);
     padding: 0;
     list-style: none;
     text-decoration: none;
-    overflow-y: none;
+    
 }
 body {
     font-family: "Merriweather", sans-serif;
-
+    overflow-x: hidden;
     p {
         font-style: italic;
     }

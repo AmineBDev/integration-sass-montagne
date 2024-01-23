@@ -1,0 +1,100 @@
+header {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 90% 10%;
+
+        .header-top {           
+            @include centerChild;
+            text-align: center;
+            color: white;
+
+            .header-container {
+
+                h1 {
+                    font-size: 5rem;
+                    max-width: 55%;
+                    margin: 0 auto;
+                    letter-spacing: 6px;
+
+                }
+
+                p {
+                    padding: 40px 0 80px;
+                    font-size: 1.3rem;
+                }
+
+                .arrow {
+                    width: 60px;
+                    height: 60px;
+                    border: 2px solid #ffffff;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+
+                    i {
+                        font-size: 1.4rem;
+                    }
+                  }
+            }
+        }  
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(158, 158, 158, 0.459);
+            color: white;
+            text-transform: uppercase; 
+            font-family: "Inter", sans-serif;           
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                transition: 0.3s;
+            }
+
+            .navbar-left {
+                width: 50%;
+                height: 100%;
+
+                li {
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 20px;
+                    text-align: center;
+
+                    &:hover {
+                        background: $white;
+                        color: black;
+                        transition: 0.3s;
+                    }
+                }
+            }
+
+            .navbar-right {
+                width: 25%;
+                height: 100%;
+                font-size: 1.4rem;
+
+                ul {
+                    justify-content: space-between;
+                    padding: 0 40px;
+                    
+                }
+
+                li:hover {
+                    transform: scale(1.2); 
+                }
+            }
+
+            ul {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+        }  
+}

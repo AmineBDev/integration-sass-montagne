@@ -13,11 +13,11 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  overflow-y: none;
 }
 
 body {
   font-family: "Merriweather", sans-serif;
+  overflow-x: hidden;
 }
 body p {
   font-style: italic;
@@ -31,37 +31,4 @@ body h3 {
 
 body {
   background: url(../../images/bg.jpg) center/cover fixed;
-}
-
-header {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 85% 15%;
-}
-header .header-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  color: white;
-}
-header .header-top .header-container h1 {
-  font-size: 5rem;
-  max-width: 55%;
-  margin: 0 auto;
-  letter-spacing: 6px;
-}
-header .header-top .header-container p {
-  padding: 40px 0 80px;
-}
-header .header-top .header-container i {
-  border: 1px solid #ccc;
-  padding: 10px;
-  border-radius: 50%;
 }/*# sourceMappingURL=index.css.map */
