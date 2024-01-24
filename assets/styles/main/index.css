@@ -30,6 +30,25 @@ body h2 {
   text-transform: uppercase;
 }
 
+footer {
+  margin: 30px auto 80px;
+  background: rgb(228, 228, 228);
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer .footer-left {
+  display: grid;
+  justify-items: center;
+}
+footer .footer-left label {
+  margin-bottom: 5px;
+}
+footer .footer-left input[type=text],
+footer .footer-left textarea {
+  width: 100%;
+}
+
 body {
   background: url(../../images/bg.jpg) center/cover fixed;
 }
@@ -82,6 +101,72 @@ section .april-25 .april-25-container p {
   font-size: 1rem;
   line-height: 30px;
   padding: 50px 0;
+}
+section .april-25 button {
+  margin: 50px 0;
+}
+section .section-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+section .section-2 img {
+  width: 80%;
+  padding: 30px 0;
+}
+section .section-2 > div {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #dadada;
+}
+section .section-2 > div:first-child {
+  border-right: none;
+}
+section .section-2 > div p {
+  font-style: normal;
+  padding: 50px 0 30px;
+}
+section .section-2 > div h2 {
+  font-size: 1.6rem;
+  line-height: 30px;
+  letter-spacing: 3px;
+  width: 40%;
+  margin: auto;
+}
+section .section-2 > div button {
+  margin: 40px 0;
+}
+section .section-2 > div > div p {
+  text-align: left;
+  line-height: 30px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+footer {
+  margin: 30px auto 80px;
+  background: rgb(228, 228, 228);
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+footer .footer-left {
+  display: grid;
+  justify-items: center;
+}
+footer .footer-left label {
+  margin-bottom: 5px;
+}
+footer .footer-left input[type=text],
+footer .footer-left textarea {
+  width: 100%;
 }
 
 header {
@@ -199,4 +284,13 @@ header nav ul {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+}
+
+button {
+  background: white;
+  text-transform: uppercase;
+  padding: 15px 45px;
+  font-family: "Inter", sans-serif;
+  border: 2px solid black;
+  letter-spacing: 2px;
 }/*# sourceMappingURL=index.css.map */
