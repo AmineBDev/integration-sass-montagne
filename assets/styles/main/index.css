@@ -40,6 +40,7 @@ footer {
 footer .footer-left {
   display: grid;
   justify-items: center;
+  grid-template-areas: "na em" "ta ta" "btn btn";
 }
 footer .footer-left label {
   margin-bottom: 5px;
@@ -47,6 +48,15 @@ footer .footer-left label {
 footer .footer-left input[type=text],
 footer .footer-left textarea {
   width: 100%;
+}
+footer .footer-left #name {
+  grid-area: na;
+}
+footer .footer-left #email {
+  grid-area: em;
+}
+footer .footer-left #message {
+  grid-area: ta;
 }
 
 body {
@@ -160,6 +170,7 @@ footer {
 footer .footer-left {
   display: grid;
   justify-items: center;
+  grid-template-areas: "na em" "ta ta" "btn btn";
 }
 footer .footer-left label {
   margin-bottom: 5px;
@@ -167,6 +178,15 @@ footer .footer-left label {
 footer .footer-left input[type=text],
 footer .footer-left textarea {
   width: 100%;
+}
+footer .footer-left #name {
+  grid-area: na;
+}
+footer .footer-left #email {
+  grid-area: em;
+}
+footer .footer-left #message {
+  grid-area: ta;
 }
 
 header {

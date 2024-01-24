@@ -8,7 +8,10 @@ footer {
     .footer-left {
         display: grid;
         justify-items: center;
-
+        grid-template-areas: 
+        "na em"
+        "ta ta"
+        "btn btn";
 
         label {
             margin-bottom: 5px;
@@ -17,6 +20,18 @@ footer {
         input[type="text"],
         textarea {
             width: 100%;
+        }
+
+        #name {
+            grid-area: na;
+        }
+
+        #email {
+            grid-area: em;
+        }
+
+        #message {
+            grid-area: ta;
         }
        
     }
