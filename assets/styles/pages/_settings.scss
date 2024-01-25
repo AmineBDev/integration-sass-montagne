@@ -40,5 +40,8 @@ body {
         font-family: "Inter", sans-serif;
         text-transform: uppercase;
     }
+    a:visited {
+        color: black; /* Couleur pour les liens visités (par exemple, violet) */
+      }
 }
 
