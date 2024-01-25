@@ -15,7 +15,6 @@ header {
                     max-width: 55%;
                     margin: 0 auto;
                     letter-spacing: 6px;
-
                 }
 
                 p {
@@ -36,7 +35,16 @@ header {
                     i {
                         font-size: 1.4rem;
                     }
-                  }
+                }
+
+                @media screen and (max-width: 768px) {
+                    h1 {
+                        font-size: 3rem;
+                        max-width: 70%;
+                    }
+                    
+
+                }
             }
         }  
 
