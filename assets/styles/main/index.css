@@ -53,7 +53,7 @@ footer .footer-left label {
   font-family: "inter", sans-serif;
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: rgb(54, 54, 54);
+  color: rgb(95, 95, 95);
   letter-spacing: 1px;
 }
 footer .footer-left input {
@@ -67,6 +67,12 @@ footer .footer-left textarea {
   border-radius: 5px;
   resize: none;
   margin: 20px 0 40px;
+  padding: 15px;
+}
+footer .footer-left button {
+  background: none;
+  border: 2px solid rgb(95, 95, 95);
+  padding: 15px 30px;
 }
 footer .footer-left #name {
   grid-area: na;
@@ -76,6 +82,72 @@ footer .footer-left #email {
 }
 footer .footer-left #message {
   grid-area: ta;
+}
+footer .footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footer-right > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 100px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+  padding: 80px 40px 0;
+  border: 1px solid rgb(209, 209, 209);
+  border-top: none;
+}
+footer .footer-right > div .info {
+  color: rgb(95, 95, 95);
+  font-family: "inter", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+footer .footer-right > div p:not(.info) {
+  font-size: 0.8rem;
+  font-style: normal;
+  font-family: "merriweather";
+  color: grey;
+}
+footer .footer-right > div .street p {
+  margin-bottom: 10px;
+}
+footer .footer-right ul {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer-right ul .rs {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
 }
 
 body {
@@ -201,7 +273,7 @@ footer .footer-left label {
   font-family: "inter", sans-serif;
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: rgb(54, 54, 54);
+  color: rgb(95, 95, 95);
   letter-spacing: 1px;
 }
 footer .footer-left input {
@@ -215,6 +287,12 @@ footer .footer-left textarea {
   border-radius: 5px;
   resize: none;
   margin: 20px 0 40px;
+  padding: 15px;
+}
+footer .footer-left button {
+  background: none;
+  border: 2px solid rgb(95, 95, 95);
+  padding: 15px 30px;
 }
 footer .footer-left #name {
   grid-area: na;
@@ -224,6 +302,72 @@ footer .footer-left #email {
 }
 footer .footer-left #message {
   grid-area: ta;
+}
+footer .footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .footer-right > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 100px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+  padding: 80px 40px 0;
+  border: 1px solid rgb(209, 209, 209);
+  border-top: none;
+}
+footer .footer-right > div .info {
+  color: rgb(95, 95, 95);
+  font-family: "inter", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+footer .footer-right > div p:not(.info) {
+  font-size: 0.8rem;
+  font-style: normal;
+  font-family: "merriweather";
+  color: grey;
+}
+footer .footer-right > div .street p {
+  margin-bottom: 10px;
+}
+footer .footer-right ul {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+footer .footer-right ul .rs {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
 }
 
 header {
