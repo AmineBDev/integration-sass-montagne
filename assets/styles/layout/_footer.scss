@@ -151,7 +151,10 @@ footer {
         
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 440px) {
+        .footer-left {
+            margin: 0 0 60px;
+        }
         .footer-right {
 
             & > div {
