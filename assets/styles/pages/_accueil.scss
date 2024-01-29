@@ -12,41 +12,36 @@ section {
         width: 100%;
     }
 
-    h3 {
-        font-size: 1rem;
-        font-weight: 300;
-        padding: 70px 0;
-        position: relative;
-        display: inline-block;
-
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            bottom: 0;
-            height: 1px;
-            background-color: $white;
-
-            @media screen and (max-width: 660px) {
-                display: none;
-            }
-        }
-
-        &::before {
-            left: -160%;
-            width: 100%;
-        }
-
-        &::after {
-            right: -160%;
-            width: 100%;
-        }
-    }
-
     .april-25 {
         width: 80%;
         margin: 0 auto;
+
+        span {
+        padding: 70px 0;
+        position: relative;
+        display: block;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                width: 37%;
+                height: 1px;
+                background-color: $white;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media screen and (max-width: 750px) {
+                    width: 24%;
+                }
+            }
+            &::before {
+                left: 0;
+            }
+            &::after {
+                right: 0;
+            }
+        }
 
         .april-25-container {
             width: 60%;
@@ -74,9 +69,7 @@ section {
     }
 
     .section-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include centerChild;
 
         img {
             width: 80%;

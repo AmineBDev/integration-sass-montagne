@@ -19,6 +19,10 @@
   outline: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Merriweather", sans-serif;
   overflow-x: hidden;
@@ -33,6 +37,29 @@ body h2 {
 }
 body a:visited {
   color: black; /* Couleur pour les liens visités (par exemple, violet) */
+}
+body::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(15, 15, 15);
+  -webkit-animation: animBefore 1.5s ease forwards;
+          animation: animBefore 1.5s ease forwards;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+@-webkit-keyframes animBefore {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes animBefore {
+  to {
+    opacity: 0;
+  }
 }
 
 footer {
@@ -88,54 +115,45 @@ footer .footer-left #message {
   grid-area: ta;
 }
 footer .footer-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  border-left: 1px solid rgb(209, 209, 209);
 }
-footer .footer-right > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 100px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  height: 100%;
-  padding: 80px 40px 0;
-  border: none;
-  border-top: none;
+footer .footer-right div {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-top: 1px solid rgb(209, 209, 209);
+  padding-left: 50px;
 }
-footer .footer-right > div .info {
-  color: rgb(95, 95, 95);
-  font-family: "inter", sans-serif;
+footer .footer-right p {
+  font-style: normal;
+  line-height: 30px;
+}
+footer .footer-right p:first-child {
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
-  font-style: normal;
-  font-size: 0.8rem;
+  color: rgb(112, 112, 112);
+  letter-spacing: 1px;
 }
-footer .footer-right > div p:not(.info) {
-  font-size: 0.8rem;
-  font-style: normal;
-  font-family: "merriweather";
-  color: grey;
-}
-footer .footer-right > div .street p {
-  margin-bottom: 10px;
+footer .footer-right p:last-child {
+  color: rgb(134, 134, 134);
 }
 footer .footer-right ul {
-  width: 40%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer-right ul li {
+  padding-right: 10px;
 }
 footer .footer-right ul i {
   width: 50px;
@@ -222,37 +240,35 @@ section {
 section img {
   width: 100%;
 }
-section h3 {
-  font-size: 1rem;
-  font-weight: 300;
-  padding: 70px 0;
-  position: relative;
-  display: inline-block;
-}
-section h3:before, section h3:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  bottom: 0;
-  height: 1px;
-  background-color: rgb(228, 228, 228);
-}
-@media screen and (max-width: 660px) {
-  section h3:before, section h3:after {
-    display: none;
-  }
-}
-section h3::before {
-  left: -160%;
-  width: 100%;
-}
-section h3::after {
-  right: -160%;
-  width: 100%;
-}
 section .april-25 {
   width: 80%;
   margin: 0 auto;
+}
+section .april-25 span {
+  padding: 70px 0;
+  position: relative;
+  display: block;
+}
+section .april-25 span:before, section .april-25 span:after {
+  content: "";
+  position: absolute;
+  width: 37%;
+  height: 1px;
+  background-color: rgb(228, 228, 228);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media screen and (max-width: 750px) {
+  section .april-25 span:before, section .april-25 span:after {
+    width: 24%;
+  }
+}
+section .april-25 span::before {
+  left: 0;
+}
+section .april-25 span::after {
+  right: 0;
 }
 section .april-25 .april-25-container {
   width: 60%;
@@ -385,54 +401,45 @@ footer .footer-left #message {
   grid-area: ta;
 }
 footer .footer-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  border-left: 1px solid rgb(209, 209, 209);
 }
-footer .footer-right > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 100px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  height: 100%;
-  padding: 80px 40px 0;
-  border: none;
-  border-top: none;
+footer .footer-right div {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-top: 1px solid rgb(209, 209, 209);
+  padding-left: 50px;
 }
-footer .footer-right > div .info {
-  color: rgb(95, 95, 95);
-  font-family: "inter", sans-serif;
+footer .footer-right p {
+  font-style: normal;
+  line-height: 30px;
+}
+footer .footer-right p:first-child {
+  font-family: "Inter", sans-serif;
   text-transform: uppercase;
-  font-style: normal;
-  font-size: 0.8rem;
+  color: rgb(112, 112, 112);
+  letter-spacing: 1px;
 }
-footer .footer-right > div p:not(.info) {
-  font-size: 0.8rem;
-  font-style: normal;
-  font-family: "merriweather";
-  color: grey;
-}
-footer .footer-right > div .street p {
-  margin-bottom: 10px;
+footer .footer-right p:last-child {
+  color: rgb(134, 134, 134);
 }
 footer .footer-right ul {
-  width: 40%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .footer-right ul li {
+  padding-right: 10px;
 }
 footer .footer-right ul i {
   width: 50px;
@@ -507,6 +514,7 @@ footer .footer-right ul i {
 }
 
 header {
+  color: white;
   height: 100vh;
   display: grid;
   grid-template-rows: 90% 10%;
@@ -522,7 +530,11 @@ header .header-top {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  color: white;
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-animation: headerAnim 1.5s forwards;
+          animation: headerAnim 1.5s forwards;
 }
 header .header-top .header-container h1 {
   font-size: 5rem;
@@ -553,6 +565,20 @@ header .header-top .header-container i {
 header .header-top .header-container i i {
   font-size: 1.4rem;
 }
+@-webkit-keyframes headerAnim {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes headerAnim {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
 @media screen and (max-width: 768px) {
   header .header-top .header-container h1 {
     font-size: 3rem;
@@ -579,19 +605,24 @@ header nav {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(158, 158, 158, 0.459);
-  color: white;
   text-transform: uppercase;
   font-family: "Inter", sans-serif;
   width: 80%;
   margin: 0 auto;
+  z-index: 100;
 }
 header nav li {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 header nav .navbar-left {
   width: 50%;
   height: 100%;
+}
+header nav .navbar-left:hover li:not(:hover) {
+  background: none;
+  color: rgb(228, 228, 228);
 }
 header nav .navbar-left li {
   height: 100%;
@@ -607,11 +638,9 @@ header nav .navbar-left li {
   padding: 0 20px;
   text-align: center;
 }
-@media screen and (max-width: 480px) {
-  header nav .navbar-left li {
-    font-size: 0.8rem;
-    padding: 0;
-  }
+header nav .navbar-left li:first-child {
+  background: rgb(228, 228, 228);
+  color: black;
 }
 header nav .navbar-left li:hover {
   background: rgb(228, 228, 228);
@@ -619,15 +648,24 @@ header nav .navbar-left li:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+@media screen and (max-width: 480px) {
+  header nav .navbar-left li {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   header nav .navbar-left {
     width: 100%;
   }
 }
 header nav .navbar-right {
-  width: 25%;
-  height: 100%;
   font-size: 1.4rem;
+  width: 25%;
+  min-width: 200px;
+  max-width: 300px;
+  height: 100%;
+  margin-left: 10px;
 }
 header nav .navbar-right ul {
   -webkit-box-pack: justify;
@@ -661,4 +699,5 @@ button {
   font-family: "Inter", sans-serif;
   border: 2px solid black;
   letter-spacing: 2px;
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

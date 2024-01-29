@@ -64,47 +64,43 @@ footer {
     }
 
     .footer-right {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        border-left: 1px solid rgb(209, 209, 209); 
 
-        
+        div {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            align-content: center;
+            border-top: 1px solid rgb(209, 209, 209);
+            padding-left: 50px;
+        }
 
-        & > div {
-            display: flex;
-            gap: 100px;
-            align-items: flex-start;
-            height: 100%;
-            padding: 80px  40px 0;
-            border: none;
-            border-top: none;
+        p {
+            font-style: normal;
+            line-height: 30px;
 
-            .info { 
-                color: $black;
-                font-family: "inter", sans-serif;
-                text-transform: uppercase;
-                font-style: normal;
-                font-size: 0.8rem;
+            &:first-child {
+                font-family: "Inter", sans-serif;
+                text-transform: uppercase; 
+                color: rgb(112, 112, 112);
+                letter-spacing: 1px;
             }
-
-            p:not(.info) {
-                    font-size: 0.8rem;
-                    font-style: normal;
-                    font-family: "merriweather";
-                    color: grey;
-            }
-
-            .street {
-                p {
-                    margin-bottom: 10px;
-                }
+            &:last-child {
+                color: rgb(134, 134, 134);    
             }
         }
 
+
         ul {
-            width: 40%;
+            width: 50%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            
+            li {
+                padding-right: 10px;
+            }
 
             i {
                     width: 50px;

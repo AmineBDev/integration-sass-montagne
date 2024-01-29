@@ -29,6 +29,9 @@ $black: rgb(95, 95, 95);
     box-sizing: border-box;
     outline: none;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Merriweather", sans-serif;
     overflow-x: hidden;
@@ -43,5 +46,21 @@ body {
     a:visited {
         color: black; /* Couleur pour les liens visités (par exemple, violet) */
       }
-}
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgb(15, 15, 15);
+        animation: animBefore 1.5s ease forwards;
+        animation-delay: 0.15s;
 
+        @keyframes animBefore {
+            to {
+                opacity: 0;
+            }
+        }
+    }
+}
